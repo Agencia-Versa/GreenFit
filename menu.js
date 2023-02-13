@@ -17,3 +17,13 @@ EMenuButton.addEventListener('click', () => {
         openMenu()
     }
 })
+
+const EMenuLinks = Array.from(ENavMenu.children)
+
+EMenuLinks.forEach(element => {
+    element.addEventListener('click', () => {
+        if(ENavMenu.classList.contains('mobile')){
+            closeMenu()
+        }
+    })
+});
